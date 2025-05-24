@@ -40,6 +40,11 @@ class Producto{
     public decimal Precio { get; set; }
 }
 
+dotnet new webapi -o ServidorStock
+cd ServidorStock
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package Microsoft.AspNetCore.OpenApi
+
 public class AppDbContext : DbContext
 {
     public DbSet<Producto> Productos { get; set; }
@@ -65,8 +70,7 @@ public class AppDbContext : DbContext
         );
     }
 }
-dotnet new console -o ClienteStock cd ClienteStock
-dotnet add package System.Net.Http.Json
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<AppDbContext>();
