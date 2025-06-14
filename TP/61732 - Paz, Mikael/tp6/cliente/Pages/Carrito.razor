@@ -39,7 +39,10 @@
                 {
                     var producto = productos.FirstOrDefault(p => p.Id == item.ProductoId);
                     <tr>
-                        <td>@producto?.Nombre</td>
+                        <td>
+                            <img src="@producto?.ImagenUrl" alt="@producto?.Nombre" class="img-carrito me-2" />
+                            @producto?.Nombre
+                        </td>
                         <td>
                             <button class="btn btn-sm btn-secondary me-1" @onclick="() => CambiarCantidad(item, -1)">-</button>
                             @item.Cantidad
