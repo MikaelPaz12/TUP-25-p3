@@ -1,4 +1,5 @@
 using System.Net.Http.Json;
+using cliente.Models;
 
 namespace cliente.Services;
 
@@ -44,42 +45,4 @@ public class ApiService {
             return new DatosRespuesta { Mensaje = $"Error: {ex.Message}", Fecha = DateTime.Now };
         }
     }
-}
-
-// DTOs para comunicación con la API
-public class ProductoDto {
-    public int Id { get; set; }
-    public string Nombre { get; set; } = string.Empty;
-    public string Descripcion { get; set; } = string.Empty;
-    public decimal Precio { get; set; }
-    public int Stock { get; set; }
-    public string ImagenUrl { get; set; } = string.Empty;
-}
-public class CarritoDto {
-    public Guid Id { get; set; }
-    public List<ItemCarritoDto> Items { get; set; } = new();
-}
-public class ItemCarritoDto {
-    public int ProductoId { get; set; }
-    public int Cantidad { get; set; }
-}
-public class CompraDto {
-    public int Id { get; set; }
-    public DateTime Fecha { get; set; }
-    public decimal Total { get; set; }
-    public string NombreCliente { get; set; } = string.Empty;
-    public string ApellidoCliente { get; set; } = string.Empty;
-    public string EmailCliente { get; set; } = string.Empty;
-    public List<ItemCompraDto> Items { get; set; } = new();
-}
-public class ItemCompraDto {
-    public int Id { get; set; }
-    public int ProductoId { get; set; }
-    public int CompraId { get; set; }
-    public int Cantidad { get; set; }
-    public decimal PrecioUnitario { get; set; }
-}
-public class DatosRespuesta {
-    public string Mensaje { get; set; }
-    public DateTime Fecha { get; set; }
 }
