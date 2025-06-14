@@ -30,6 +30,31 @@
                 <b>Total a pagar:</b> $@TotalCarrito
             </div>
         </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio unitario</th>
+                    <th>Importe</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in carrito.Items)
+                {
+                    var producto = productos.FirstOrDefault(p => p.Id == item.ProductoId);
+                    <tr>
+                        <td>
+                            <img src="@producto?.ImagenUrl" alt="@producto?.Nombre" class="img-carrito me-2" />
+                            @producto?.Nombre
+                        </td>
+                        <td>@item.Cantidad</td>
+                        <td>$@producto?.Precio</td>
+                        <td>$@(producto != null ? producto.Precio * item.Cantidad : 0)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
         <EditForm Model="form" OnValidSubmit="ConfirmarCompra">
             <DataAnnotationsValidator />
             <ValidationSummary />
