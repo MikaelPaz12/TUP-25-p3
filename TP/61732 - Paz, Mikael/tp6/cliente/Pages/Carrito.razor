@@ -2,6 +2,7 @@
 @using cliente.Services
 @inject ApiService ApiService
 @inject NavigationManager Navigation
+@inject LocalStorageService LocalStorage
 
 <PageTitle>Carrito</PageTitle>
 
@@ -72,12 +73,13 @@
 
     private async Task CargarCarrito()
     {
-        // Aquí deberías obtener el carritoId de localStorage o similar
-        // Por simplicidad, se asume un carritoId fijo (puedes mejorarlo)
-        if (carritoId == Guid.Empty)
+        // Obtener carritoId de localStorage
+        var idStr = await LocalStorage.GetItemAsync("carritoId");
+        if (!Guid.TryParse(idStr, out carritoId) || carritoId == Guid.Empty)
         {
             var nuevo = await ApiService.CrearCarritoAsync();
             carritoId = nuevo?.Id ?? Guid.NewGuid();
+            await LocalStorage.SetItemAsync("carritoId", carritoId.ToString());
         }
         carrito = await ApiService.ObtenerCarritoAsync(carritoId);
     }
