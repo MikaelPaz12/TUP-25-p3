@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using servidor;
+using servidor.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,5 +42,16 @@ app.MapGet("/", () => "Servidor API está en funcionamiento");
 
 // Ejemplo de endpoint de API
 app.MapGet("/api/datos", () => new { Mensaje = "Datos desde el servidor", Fecha = DateTime.Now });
+
+// Endpoints de Productos
+app.MapGet("/productos", async (TiendaDbContext db, string? q) =>
+{
+    var query = db.Productos.AsQueryable();
+    if (!string.IsNullOrWhiteSpace(q))
+        query = query.Where(p => p.Nombre.Contains(q) || p.Descripcion.Contains(q));
+    return await query.ToListAsync();
+});
+
+// Carrito en memoria (simulación por sesión, para simplificar)
 
 app.Run();
