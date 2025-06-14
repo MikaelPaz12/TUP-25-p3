@@ -1,8 +1,8 @@
 ﻿@page "/"
 @using cliente.Services
+@using cliente.Models
 @inject ApiService ApiService
-
-<PageTitle>Catálogo</PageTitle>
+@inject NavigationManager Navigation
 
 <div class="container">
     <div class="row mb-4 align-items-center">
@@ -87,7 +87,7 @@
 
     private void IrAlCarrito()
     {
-        // Navegación a la página de carrito (a implementar)
+        Navigation.NavigateTo("/carrito");
     }
 
     private async Task OnBusquedaChanged(ChangeEventArgs e)
