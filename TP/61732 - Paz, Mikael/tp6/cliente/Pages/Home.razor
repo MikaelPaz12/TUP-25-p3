@@ -3,6 +3,7 @@
 @using cliente.Models
 @inject ApiService ApiService
 @inject NavigationManager Navigation
+@inject CarritoState CarritoState
 
 <div class="container">
     <div class="row mb-4 align-items-center">
@@ -23,6 +24,10 @@
         @if (cargando)
         {
             <div class="col-12"><div class="alert alert-info">Cargando productos...</div></div>
+        }
+        else if (!string.IsNullOrEmpty(errorMsg))
+        {
+            <div class="col-12"><div class="alert alert-danger">@errorMsg</div></div>
         }
         else if (productos != null)
         {
@@ -55,6 +60,7 @@
     private bool cargando = false;
     private int cantidadCarrito = 0;
     private Guid carritoId;
+    private string? errorMsg;
 
     protected override async Task OnInitializedAsync()
     {
@@ -65,7 +71,15 @@
     private async Task CargarProductos()
     {
         cargando = true;
-        productos = await ApiService.ObtenerProductosAsync(busqueda);
+        errorMsg = null;
+        try
+        {
+            productos = await ApiService.ObtenerProductosAsync(busqueda);
+        }
+        catch (Exception ex)
+        {
+            errorMsg = "No se pudieron cargar los productos. Intente más tarde.";
+        }
         cargando = false;
     }
 
@@ -83,6 +97,7 @@
             await InicializarCarrito();
         var carrito = await ApiService.AgregarProductoAsync(carritoId, producto.Id, 1);
         cantidadCarrito = carrito?.Items?.Sum(i => i.Cantidad) ?? 0;
+        CarritoState.Cantidad = cantidadCarrito;
     }
 
     private void IrAlCarrito()

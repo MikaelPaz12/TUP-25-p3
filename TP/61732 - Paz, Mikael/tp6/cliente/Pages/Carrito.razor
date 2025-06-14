@@ -4,6 +4,7 @@
 @inject ApiService ApiService
 @inject NavigationManager Navigation
 @inject LocalStorageService LocalStorage
+@inject CarritoState CarritoState
 
 <div class="container">
     <div class="row mb-4">
@@ -68,6 +69,12 @@
     {
         await CargarCarrito();
         await CargarProductos();
+        await ActualizarContadorCarrito();
+    }
+
+    private async Task ActualizarContadorCarrito()
+    {
+        CarritoState.Cantidad = carrito?.Items?.Sum(i => i.Cantidad) ?? 0;
     }
 
     private async Task CargarCarrito()
@@ -96,18 +103,21 @@
         if (producto == null || nuevoValor > producto.Stock) return;
         await ApiService.AgregarProductoAsync(carritoId, item.ProductoId, nuevoValor);
         await CargarCarrito();
+        await ActualizarContadorCarrito();
     }
 
     private async Task QuitarProducto(ItemCarritoDto item)
     {
         await ApiService.QuitarProductoAsync(carritoId, item.ProductoId);
         await CargarCarrito();
+        await ActualizarContadorCarrito();
     }
 
     private async Task VaciarCarrito()
     {
         await ApiService.VaciarCarritoAsync(carritoId);
         await CargarCarrito();
+        await ActualizarContadorCarrito();
     }
 
     private void IrAConfirmacion()

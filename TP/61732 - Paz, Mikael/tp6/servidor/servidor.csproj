@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="microsoft.entityframeworkcore" Version="8.0.5" />
     <PackageReference Include="microsoft.entityframeworkcore.sqlite" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.5" />
   </ItemGroup>
 
 </Project>
