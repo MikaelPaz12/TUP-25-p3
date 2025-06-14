@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using servidor;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Agregar servicios CORS para permitir solicitudes desde el cliente
@@ -9,10 +12,21 @@ builder.Services.AddCors(options => {
     });
 });
 
+// Configurar EF Core con SQLite
+builder.Services.AddDbContext<TiendaDbContext>(options =>
+    options.UseSqlite("Data Source=tiendaonline.db"));
+
 // Agregar controladores si es necesario
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
+// Aplicar migraciones y crear la base de datos automáticamente
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<TiendaDbContext>();
+    db.Database.Migrate();
+}
 
 // Configurar el pipeline de solicitudes HTTP
 if (app.Environment.IsDevelopment()) {
