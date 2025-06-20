@@ -36,9 +36,7 @@ Las personas que les falte presentar prácticos lo pueden presentar y recuperar 
 61129 Tello, Abril María Agostina    33   ✅✅🟢✅✅🟢
 61032 Moya, Mariano                  24   ✅✅🟢✅✅🟢
 62555 Verón, Matias Gabriel          27   ✅✅🟢✅✅🟢
-
-
-
+61688 García Romano, Lucas           33   ✅✅🟢✅✅🟢
 ```
 
 ## Alumnos que deben recuperar
@@ -48,7 +46,6 @@ Las personas que les falte presentar prácticos lo pueden presentar y recuperar 
 
 62055 Ahumada, Aiquén                34   ✅✅🟢✅✅🟡
       no descuenta stock al agregar al carrito
-
 
 61271 Donelli, Gerardo Exequiel      34   ✅✅🟢✅✅🟡
       no descuenta stock, pesima presentacion
@@ -85,7 +82,6 @@ Las personas que les falte presentar prácticos lo pueden presentar y recuperar 
 
 61478 Soto, Antonella                29   ✅✅🟢✅✅🟡
       no agrega al carrito
-
 ```
 
 ## Alumnos que deben corregir
@@ -148,15 +144,28 @@ Las personas que les falte presentar prácticos lo pueden presentar y recuperar 
 61064 Racedo, Francisco Nicolas      33   ✅✅🟢✅✅🟢
 62104 Robledo, Juan Gerardo          31   ✅✅🟢✅✅🟢
 61340 Tognalli, Mateo Fabrizio       33   ✅✅🟢✅✅🟢
-61988 Villada, Guillermo Nicolás     23   ✅✅🟢❓✅🟢
+61988 Villada, Guillermo Nicolás     23   ✅✅🟢✅✅🟢
+61962 Robledo, Rocio Micaela         15   ✅✅🟢❓✅🟢
+61680 Dziewulski, Karen              33   ✅✅🟢✅✅🟢
+61535 Mainardi, Facundo              32   ✅✅🟢✅✅🟢
+61652 Heredia, Juan Pablo            29   ✅✅🟢✅✅🟢
+61491 Acuña, Alejo Gabriel           33   ✅✅🟢✅✅🟢
+61060 Fioretti, Elian Enrique        28   ✅✅🟢✅✅🟢
+61053 Matas Molina, Agustín          32   ✅✅🟢✅✅🟢
+61122 Molina Hernando, Nahuel        32   ✅✅🟢✅✅🟢
+62136 Muse, Alejandro                30   ✅✅🟢✅✅🟢
+61050 Diaz Sánchez, Nelson Santiago  34   ✅✅🟢✅✅🟢
+61328 Moussa Cancino, Mario Matias   29   ✅✅🟢✅✅🟢
+61051 Diaz, Agustin Emanuel          26   ✅✅🟢✅✅🟢
+61611 Coronel, Julieta Antonella     26   ✅✅🟢✅✅🟢
+61345 Caro, Tobias                   22   ✅✅🟢✅✅🟢
+61673 Delgado, Augusto Emanuel       21   ✅✅🟢✅✅🟢
 
 ```
 
 ## Alumnos que deben recuperar
 ```
 
-61491 Acuña, Alejo Gabriel           33   ✅✅🟢✅✅🟡
-      No actualiza el stock, no permite volver al catalogo
 
 61189 Buzza, Juliana                 24   ✅✅🟢✅✅🟡
       solo funciona una vez, al confirmar carrito deja de funcionar
@@ -164,71 +173,32 @@ Las personas que les falte presentar prácticos lo pueden presentar y recuperar 
 61314 Morales, Ignacio Agustin      24   ✅✅🟢✅✅🟡
       debe ir directamente al catalogo, no controla stock en el carrito
 
-61345 Caro, Tobias                   22   ✅✅🟢✅✅🟡
-      no actualiza stock
-
-61611 Coronel, Julieta Antonella     26   ✅✅🟢✅✅🟡
-      no actualiza stock, mejorar presentacion
-
-61673 Delgado, Augusto Emanuel       21   ✅✅🟢✅❓🟡
-      no funciona, no muestra productos
-
-61051 Diaz, Agustin Emanuel          26   ✅✅🟢✅✅🟡
-      no actualiza stock,
-
-61050 Diaz Sánchez, Nelson Santiago  34   ✅✅🟢✅✅🟡
-      no tiene forma de volver al catalogo, no actualiza stock
-
-61680 Dziewulski, Karen              33   ✅✅🟢✅✅🟡
-      me da error al confirmar la compra, no actualiza stock, ni controla el stock
-
-61060 Fioretti, Elian Enrique        28   ✅✅🟢✅✅🟡
-      no actualiza stock al agregar al carrito, estetica muy cuidada
-
 61540 Garcia Mc Guiness, Gonzalo     31   ✅✅🟢✅✅🟡
       no muestra imagen de producto, no actualiza stock
-
-61688 García Romano, Lucas           33   ✅✅🟢✅✅🟡
-      no realiza busqueda, no actualiza stock
 
 61042 Gonzalez, Luis David           31   ✅✅🟢✅✅🟡
       no tiene imagenes, no actualiza stock, en el carrito no controla stock
 
-61652 Heredia, Juan Pablo            29   ✅✅🟢✅✅🟡
-      no actualiza stock, al agregar al carrito no incrementa la cantidad
-
 61218 Liendo, Lautaro                31   ✅✅🟢✅✅🟡
       no tiene imagen, no va al carrito al comprar, me dice
-
-61535 Mainardi, Facundo              32   ✅✅🟢✅✅🟡
-      no actualiza stock
 
 61905 Martinez, Augusto              23   ✅❓🟢✅❓🟡
       no muestra imagenes, no confirma compra
 
-61053 Matas Molina, Agustín          32   ✅✅🟢✅✅🟡
-      no actualiza stock, no vacia el carrito al confirmar la compra
-
 61848 Mazza Leon, Fabrizio Lautaro   33   ✅✅🟢✅✅🟡
-      no actualiza el stock
+      sacar la cantidad a agregar en el catalogo, poner botones de "+" y "-" en el carrito, no actualiza el stock
 
 61048 Medina, Luciano                26   ✅✅🟢✅✅🟡
       muestra las imagenes
 
-61122 Molina Hernando, Nahuel        32   ✅✅🟢✅✅🟡
-      no agrega al carrito
-
-62136 Muse, Alejandro                30   ✅✅🟢✅✅🟡
-      ir directamente al catalogo, no actualiza stock, no verifica el stock, no permite confirmar pedido
-
 61985 Orqueda, Francisco Nicolás     25   ✅✅🟢✅✅🟡
-      no actualiza stock
+      Reinicia la cantidad en el carrito al agregar un producto desde el catolog, deberia incrementar la cantidad
 
 61644 Ortega, Fernando Nicolas       35   ✅✅🟢✅✅🟡
       no actualiza stock, no controla stock, me da mensaje al confimar
 
 61732 Paz, Mikael                    24   ✅✅🟢✅✅🟡
-      no funciona, no muestra productos
+      Cuando agrega al carrito reinicia la cantidad, no actualiza el stock al agregar, no controla el stock
 
 61125 Rocha, Luca                    31   ✅✅🟢✅✅🟡
       no muestra imagen, no agrega al carrito, doble navegacion, ir al catalogo directamente
@@ -238,25 +208,23 @@ Las personas que les falte presentar prácticos lo pueden presentar y recuperar 
 
 61227 Valdiglesias Martel, Federico  34   ✅✅🟢✅✅🟡
       cuando confirma no vuelve al catalogo, no carga toda las imagenes
+
+61912 Nuñez, Arturo Valentin         22   ✅✅🟢✅✅🟡
+      Pide campos adicionales al confirmar la compra, No limpia el carrito al confirmar la compra
 ```
 
 ## Alumnos que deben corregir 
 ```
-61328 Moussa Cancino, Mario Matias   29   ✅✅🟢✅✅🔴
-      internal server error
-
 61496 Parache, Ariana Agustina       30   ✅✅🟢❓❓🔴
       The entity type 'ItemCarrito' requires a primary key to be defined
 
-61962 Robledo, Rocio Micaela         15   ✅✅🟢❓✅🔴
-      'Layout' no existe en el espacio de nombres 'Cliente'
+61226 Luna, Andres Maximiliano       30   ✅✅🟢✅✅🟡
+      Se rompe la presentacion esta mal bootstrap.min.css, no poner la posibilidad de elegiar cuanto agrega el carrito, al contola el stock a agregar.
 ```
 
 ## Alumnos que no presentaron
 ```
 61252 Aguirre Rojas, Lourdes Valenti 24   ✅✅🟢❓❓❓
-61226 Luna, Andres Maximiliano       30   ✅✅🟢✅✅❓
-61912 Nuñez, Arturo Valentin         22   ✅✅🟢❓❓❓
 61140 Perez, Fernando Alberto        23   ✅✅🟢❓✅❓
 61052 Reynoso, Braian Nicolás        34   ✅✅🟢✅✅❓
 61914 Robles, Leandro Gonzalo        17   ✅✅🟢✅✅❓
